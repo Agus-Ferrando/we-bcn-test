@@ -7,7 +7,7 @@ export default defineNuxtConfig({
             title: 'We bcn test',
             meta: [
                 { name: 'description', content: 'All the best products in one place'},
-                { name: 'hola', content: 'hola que tal'}
+                { name: 'google-site-verification', content: 'ugIsV3zEV6OO2pd3FPdhCbz0QkjxsaIuLMKimFWpQ6I'}
             ],
             link: [
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons'}
