@@ -12,7 +12,8 @@ export default defineNuxtConfig({
             link: [
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons'}
             ]
-        }
+        },
+        baseURL: '/wetest/',
     },
     ssr : true
 })
