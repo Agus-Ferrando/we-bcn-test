@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
-const data = await fetch('https://fakestoreapi.com/products')
+const data = await fetch('https://bibliotech.bymotto.com/api/hubs')
                      .then(res => res.json())
-                     .then(data => data)
-
+                     .then(data => data.data)
+console.log(data)
 </script>
 
 
@@ -20,10 +20,10 @@ const data = await fetch('https://fakestoreapi.com/products')
         <div class="product" v-for="(product, i) in data" :key="i">
           <RouterLink :to="`/details/${product.id}`">
             <div>
-              {{  product.title  }}
+              {{  product.name  }}
             </div>
           </RouterLink>
-          <div>{{ product.description }}</div>
+          <div v-html="product.description"></div>
         </div>
       </div>
   </div>

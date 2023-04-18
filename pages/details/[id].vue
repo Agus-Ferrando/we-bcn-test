@@ -3,8 +3,8 @@
 const route = useRoute();
 const itemId = route.params.id
 
-const productDetails = await fetch(`https://fakestoreapi.com/products/${itemId}`).then(res => res.json()).then(data => data);
-const title = `${productDetails.title}`;
+const productDetails = await fetch(`https://bibliotech.bymotto.com/api/hubs/${itemId}`).then(res => res.json()).then(data => data.data);
+const title = `${productDetails.name}`;
 
   useHead({
     title: title,
@@ -34,11 +34,9 @@ const title = `${productDetails.title}`;
       </nav>
     <div class="details">
         <h2>
-        {{ productDetails.title }}
+        {{ productDetails.name }}
         </h2>
-        <div>
-        {{ productDetails.description }}
-        </div>
+        <div v-html="productDetails.description"></div>
     </div>
     <br><br>
     <i class="material-icons">add_shopping_cart</i>
