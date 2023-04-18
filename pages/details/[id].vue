@@ -4,7 +4,7 @@ const route = useRoute();
 const itemId = route.params.id
 
 const productDetails = await fetch(`https://fakestoreapi.com/products/${itemId}`).then(res => res.json()).then(data => data);
-const title = `${productDetails.title} | ${productDetails.description}`;
+const title = `${productDetails.title}`;
 
   useHead({
     title: title,
