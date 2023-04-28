@@ -12,21 +12,21 @@ const contact= ref<boolean>()
 const lang = ref([])
 const title = ref()
 
-onBeforeMount(async () => {
-  data.value = await fetch('https://bibliotech.bymotto.com/api/hubs')
-                     .then(res => res.json())
-                     .then(data => data.data)
 
-  homeConfig.value = await fetch('http://bibliotech.bymotto.com/api/config')
-                      .then(res => res.json())
-                      .then(data => data.data)   
-                      
-                      
-  about.value = homeConfig.value.hide_about_us
-  contact.value = homeConfig.value.hide_contact
-  lang.value = homeConfig.value.languages_availables
-  title.value = homeConfig.value.title
-})
+data.value = await fetch('https://bibliotech.bymotto.com/api/hubs')
+                    .then(res => res.json())
+                    .then(data => data.data)
+
+homeConfig.value = await fetch('http://bibliotech.bymotto.com/api/config')
+                    .then(res => res.json())
+                    .then(data => data.data)   
+                    
+                    
+about.value = homeConfig.value.hide_about_us
+contact.value = homeConfig.value.hide_contact
+lang.value = homeConfig.value.languages_availables
+title.value = homeConfig.value.title
+
 
 async function changeLang(item: string){
   let response = await fetch(`http://bibliotech.bymotto.com/api/config/${item}`)

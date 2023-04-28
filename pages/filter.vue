@@ -4,11 +4,10 @@ const data= ref()
 const nameName= ref<string>("")
 const description= ref<string>("")
 
-onBeforeMount(async () => {
-  data.value = await fetch('https://bibliotech.bymotto.com/api/searcher')
+data.value = await fetch('https://bibliotech.bymotto.com/api/searcher')
                      .then(res => res.json())
                      .then(data => data.data)
-})
+
 
 async function applyFilters(){
    data.value = await fetch(`https://bibliotech.bymotto.com/api/searcher?name=${nameName.value}&description=${description.value}`, {method: "POST", body: JSON.stringify({name: nameName, description: description})})
