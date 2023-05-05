@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "^3.4.1"
+    "nuxt": "^3.4.1",
+    "nuxt-simple-sitemap": "^2.4.22"
   },
   "overrides": {
     "vue": "latest"

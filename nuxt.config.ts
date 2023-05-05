@@ -15,5 +15,8 @@ export default defineNuxtConfig({
         },
         baseURL: '/we-bcn-test/',
     },
-    ssr : true
+    ssr : true,
+    modules: [
+        'nuxt-simple-sitemap',
+    ],
 })
