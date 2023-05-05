@@ -19,4 +19,17 @@ export default defineNuxtConfig({
     modules: [
         'nuxt-simple-sitemap',
     ],
+    sitemap: {
+        hostname: 'https://agus-ferrando.github.io/we-bcn-test',
+        gzip: true,
+        routes: [
+            '/',
+            '/about',
+            '/filter',
+            '/details/dotnetdot/',
+            '/details/frontend_cluster/',
+            '/details/php_lovers/',
+            '/details/pythonises/',
+        ],
+    }
 })

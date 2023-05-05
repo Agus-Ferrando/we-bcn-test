@@ -17,6 +17,7 @@
     "vue": "latest"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^2.4.0",
     "@pinia/nuxt": "^0.4.9",
     "pinia": "^2.0.35"
   }
